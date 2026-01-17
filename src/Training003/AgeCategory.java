@@ -1,3 +1,5 @@
+package Training003;
+
 import java.util.Scanner;
 
 /* Training III

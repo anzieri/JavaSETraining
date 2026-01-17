@@ -1,8 +1,10 @@
+package Training002;
+
 import java.util.Scanner;
 
 /* Training II
 
-    Practice Exercise 1: Calculator
+    Practice Exercise 1: Training002.Calculator
     Create a simple calculator that:
     1. Takes two numbers as input
     2. Performs all arithmetic operations

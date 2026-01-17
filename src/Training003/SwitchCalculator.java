@@ -1,8 +1,10 @@
+package Training003;
+
 import java.util.Scanner;
 
 /* Training III
 
-    Practice Exercise 2: Calculator
+    Practice Exercise 2: Training002.Calculator
     Create a calculator using switch that:
     Takes two numbers and an operator (+, -, *, /, %)
     Performs the operation
