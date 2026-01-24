@@ -19,7 +19,7 @@ public class PrimeNumberChecker {
         System.out.println(" === Prime Number Checker ===\n\nThis program only caters for first few hundred primes");
         Scanner scanner = new Scanner(System.in);
 
-        //TO BE OPTIMISED, im tired
+        //TODO: TO BE OPTIMISED, im tired
         for(int i = 0; i <=10; i++){
             System.out.println("Enter a number between 1 and 100");
             int num = scanner.nextInt();

@@ -1,4 +1,4 @@
-package Assessments;
+package Training007;
 
 import java.util.Arrays;
 
@@ -14,6 +14,7 @@ import java.util.Arrays;
 
     learnt System.arraycopy(grades, 0, temp, 0, grades.length);
 
+    GPA = (grade points * credits)/(no.of units *credits)
     Assumption for grades obtained online
     A+ = 4.3 grade points
     A = 4 grade points
@@ -47,9 +48,34 @@ public class Student {
         return temp;
     }
 
-    public static int calculateGPA(int[] grades){
-        //TODO: Make Magic Soon
-        return 0;
+    public static double calculateGPA(String[] grades){
+
+        double GPA = 0;
+        double sum = 0;
+        double CREDITS =3;
+
+        for(String grade: grades){
+            switch(grade){
+                case "A+": sum = sum + (CREDITS * 4.3); break;
+                case "A": sum = sum + (CREDITS * 4); break;
+                case "A-": sum = sum + (CREDITS * 3.7); break;
+                case "B+": sum = sum + (CREDITS * 3.3); break;
+                case "B": sum = sum + (CREDITS * 3); break;
+                case "B-": sum = sum + (CREDITS * 2.7); break;
+                case "C+": sum = sum + (CREDITS * 2.3); break;
+                case "C": sum = sum + (CREDITS * 2); break;
+                case "C-": sum = sum + (CREDITS * 1.7); break;
+                case "D+": sum = sum + (CREDITS * 1.3); break;
+                case "D": sum = sum + (CREDITS * 1); break;
+                case "D-": sum = sum + (CREDITS * 0.7); break;
+                case "E": sum = sum + (CREDITS * 0.3); break;
+                case "F": sum = sum + (CREDITS * 0); break;
+
+            }
+            GPA = sum/(grades.length * 3);
+
+        }
+        return GPA;
     }
 
     public Student(){};
@@ -94,10 +120,12 @@ public class Student {
 
 class StudentManager{
 
-    static void main() {
-        Student student1 = new Student("John Doe", 627, new String[]{"-A", "B", "B+", "C-", "A"});
+    public static void main(String[] args) {
+        Student student1 = new Student("John Doe", 627, new String[]{"A+", "B", "B+", "C-", "A"});
 
-        System.out.println(Arrays.toString(Student.addGrades(  "D", student1)));
+        System.out.println(Arrays.toString(Student.addGrades(  "C", student1)));
+        System.out.println(Arrays.toString(Student.addGrades(  "B-", student1)));
+        System.out.println(Student.calculateGPA(student1.getGrades()));
     }
 
 }
