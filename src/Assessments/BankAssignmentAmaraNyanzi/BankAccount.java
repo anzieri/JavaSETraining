@@ -1,6 +1,6 @@
 package Assessments.BankAssignmentAmaraNyanzi;
 
-public class BankAccount {
+public abstract class BankAccount {
     private String accountNumber;
     private String accountHolder;
     protected double balance;
@@ -56,14 +56,14 @@ public class BankAccount {
         bankAccount.setBalance(newBalance);
     }
 
-    public void withdraw(double amount) throws InsufficientFundsException, InvalidAmountException {
+    public void withdraw(BankAccount bankAccount,double amount) throws InsufficientFundsException, InvalidAmountException {
         if (amount <= 0) {
             throw new InvalidAmountException("Amount cannot be less than 0.");
         }
-        if (amount > balance) {
+        if (amount > bankAccount.getBalance()) {
             throw new InsufficientFundsException("Insufficient funds for withdrawal");
         }
-        balance = balance - amount;
+        bankAccount.setBalance(bankAccount.getBalance()- amount);
     }
 
 

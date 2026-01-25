@@ -10,7 +10,7 @@ public class SavingsAccount extends BankAccount {
     }
 
     @Override
-    public void withdraw(double amount) throws InsufficientFundsException, InvalidAmountException {
+    public void withdraw(BankAccount account, double amount) throws InsufficientFundsException, InvalidAmountException {
         if (amount <= 0) {
             throw new InvalidAmountException("Withdrawal amount must be positive");
         }

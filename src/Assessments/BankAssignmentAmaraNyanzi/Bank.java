@@ -2,6 +2,7 @@ package Assessments.BankAssignmentAmaraNyanzi;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Bank {
     private ArrayList<BankAccount> accounts;
@@ -21,7 +22,8 @@ public class Bank {
 
     public BankAccount findAccount(String accountNumber) {
         for (BankAccount acc : accounts) {
-            if (acc.getAccountNumber() == accountNumber) {
+            if (Objects.equals(acc.getAccountNumber(), accountNumber)) {
+                System.out.println("Found account: " + acc.getAccountNumber());
                 return acc;
             }
         }

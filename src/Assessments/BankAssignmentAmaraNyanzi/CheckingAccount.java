@@ -9,7 +9,7 @@ public class CheckingAccount extends  BankAccount {
     }
 
     @Override
-    public void withdraw(double amount) throws  InvalidAmountException {
+    public void withdraw(BankAccount account, double amount) throws  InvalidAmountException {
         if (amount <= 0) {
             throw new InvalidAmountException("Withdrawal amount must be positive");
         }
