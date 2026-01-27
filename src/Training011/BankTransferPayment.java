@@ -7,7 +7,6 @@ public class BankTransferPayment extends Payment{
     public String bankName;
 
 
-
     public BankTransferPayment(double accountNumber, String bankName, Date paymentDate, double amount) {
         super(amount, paymentDate);
         this.accountNumber = accountNumber;

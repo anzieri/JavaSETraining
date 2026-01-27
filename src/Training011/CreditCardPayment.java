@@ -6,8 +6,9 @@ public class CreditCardPayment extends Payment {
     public double cardNumber;
     public Date expiryDate;
 
-    public CreditCardPayment(double amount, Date paymentDate) {
+    public CreditCardPayment(double cardNumber, Date expiryDate, double amount, Date paymentDate) {
         super(amount, paymentDate);
+        this.cardNumber = cardNumber;
     }
 
     @Override
