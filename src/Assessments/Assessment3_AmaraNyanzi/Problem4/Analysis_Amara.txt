@@ -1,0 +1,25 @@
+The "static" keyword in public static String companyName would allow for modification
+ and take on the latest initialization of the companyName variable.
+ Solution: Remove static keyword.
+
+ The "private" access modifier will restrict accessibility to that particular
+ variable to strictly the class it was declared in. Sub-classes and other classes will not be able to access it.
+ Solution: Remove "private" keyword to reset to default/package access modifier.
+
+ The constructor lacks the rest of the remaining variables. Constructor variable name
+ goes against best practice.
+ Solution: Rename parameter "name" to "employeeName". "this.variable" is essential
+ for setting variables via constructor.
+
+ InvalidInputException within constructor to validate inputs upon declaration.
+
+ Initialize all other getters and setters.
+ Setter setSalary should handle the exception using a checked Exception. "this" keyword
+ missing to setSalary. this.salary=salary;
+
+ void calculateBonus() cannot return anything because its a void.
+ Bonus salary logic is miscalculated. A 10% increment would be 110%.
+ Solution: convert the void into a double to return. Adjust te 0.1 ratio to 1.1
+
+ Unclosed method and class. Solution: Close both using brackets.
+
